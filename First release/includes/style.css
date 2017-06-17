@@ -1,0 +1,84 @@
+* {margin : 0; padding: 0;}
+
+header, footer, main, nav, aside, article, section {display : block;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color : #1eb129;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+h4{
+	font-size: 20px;
+	color: #1eb129;
+	margin-left:125px;
+}
+
+h4 span{
+	font-size: 20px;
+	color: #1eb129;
+	top:10px;
+}
+
+html {
+    background: url(../images/background.jpg) center center fixed;
+}
+
+header{
+	height : 30px;
+	width : 100%;
+	background-color:#ffffff;
+	border-bottom: 1px solid #1eb129;
+}
+
+main{
+	margin : 50px 125px 25px;
+}
+
+#mixtapes{
+	width : 100%;
+	height : 100%;
+	background : rgba(255,255,255,0.9);
+	margin-top: 25px;
+}
+
+#mixtapes p{
+	color : #1eb129;
+	display : inline;
+}
+
+#mixtapes button{
+	border-radius: 10px;
+	background-color: #1eb129;
+	color:#ffffff;
+}
+
+ul img{
+	width : 250px;
+	height : 275px;
+	margin : 15px 10px 10px 10px;
+}
+
+li{
+	list-style: none; 
+	display : inline;
+}
+
+.left-img{
+	margin : 15px 10px 10px 0;
+}
+
+.right-img{
+	margin : 15px 0px 10px 10px;
+}
+
