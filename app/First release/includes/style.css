@@ -31,7 +31,7 @@ h4 span{
 }
 
 html {
-    background: url(../images/background.jpg) center center fixed;
+    background: url(../images/background.JPG) center center fixed;
 }
 
 header{
@@ -70,7 +70,7 @@ ul img{
 }
 
 li{
-	list-style: none; 
+	list-style: none;
 	display : inline;
 }
 
