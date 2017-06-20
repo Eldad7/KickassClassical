@@ -11,7 +11,8 @@ var userSchema = new Schema({
     mixtapes: [Schema.Types.ObjectId],
     liked: [Schema.Types.ObjectId],
     favInstruments: [String],
-    favComposer: [String]
+    favComposer: [String],
+    favMixtapes: [Schema.Types.ObjectId]
 },{strict:true});
 
 userSchema.statics.addNewUser = function (params,cb) {
@@ -23,6 +24,7 @@ userSchema.statics.addNewUser = function (params,cb) {
         cDate: Date.now(),
         mixtapes: [],
         liked: [],
+        favMixtapes: [],
         favInstruments: params.favInstruments,
         favComposer: params.favComposer
     };
@@ -67,6 +69,18 @@ userSchema.statics.likeComposition = function (params,cb) {
 
     var updateObj = {
         $addToSet: { liked: params.cId }
+    };
+
+    this.update(query,updateObj,cb)
+};
+
+userSchema.statics.likeMixtape = function (params,cb) {
+    var query = {
+        _id : params.uId
+    };
+
+    var updateObj = {
+        $addToSet: { favMixtapes: params.mId }
     };
 
     this.update(query,updateObj,cb)

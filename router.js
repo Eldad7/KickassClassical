@@ -30,6 +30,8 @@ app.get('/getAllComposers',main.getAllComposers);
 
 app.get('/getAllInstruments',main.getAllInstruments);
 
+app.post('/likeMixtape',main.likeMixtape);
+
 app.post('/getMixtapesFiltered',main.getMixtapesFiltered);
 
 app.post('/addNewComposition',main.addNewComposition);

@@ -53,6 +53,22 @@ exports.likeComposition = function(req, res) {
     });
 };
 
+exports.likeMixtape = function(req, res) {
+    var params = req.body;
+    console.log(Date.now().toString() + " API CALLED: likeMixtape");
+    userModel.likeMixtape(params, function(err, cb) {
+        if (err || !cb || !cb.nModified)
+            res.json({code: 200, err:"Not Modified, Bad Input / Already Liked"});
+        else {
+            compositionModel.IncLikedMixtape(params, function(err, callback) {
+                if (err)
+                    res.send(err);
+                res.json({code: 200, data:callback});
+            });
+        }
+    });
+};
+
 exports.addNewMixtape = function(req, res) {
     var params = req.body;
     console.log(Date.now().toString() + " API CALLED: addNewMixtape");

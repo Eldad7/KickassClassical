@@ -12,7 +12,8 @@ var mixtapeSchema = new Schema({
     instruments: [String],
     genre: String,
     keywords: [String],
-    cDate: Date
+    cDate: Date,
+    likes: Number
 },{strict:true});
 
 
@@ -64,6 +65,18 @@ mixtapeSchema.statics.getMixtapesFiltered = function (params,cb) {
 
 mixtapeSchema.statics.getAllInstruments = function (params,cb) {
     this.distinct('instruments',cb)
+};
+
+mixtapeSchema.statics.IncLikedMixtape = function (params,cb) {
+    var query = {
+        _id : params.mId
+    };
+
+    var updateObj = {
+        $inc: { likes: 1 }
+    };
+
+    this.update(query,updateObj,cb)
 };
 
 var mixtapeModel = mongoose.model('mixtapes', mixtapeSchema);
