@@ -57,7 +57,7 @@ userSchema.statics.verifyTok = function(params, cb) {
 
 userSchema.statics.getUserById = function (params,cb) {
     var query = {
-        _id: params.uId
+        _id: params._id
     };
     this.findOne(query, cb);
 };
@@ -68,7 +68,7 @@ userSchema.statics.likeComposition = function (params,cb) {
     };
 
     var updateObj = {
-        $push: { liked: params.cId }
+        $addToSet: { liked: params.cId }
     };
 
     this.update(query,updateObj,cb)
@@ -80,7 +80,7 @@ userSchema.statics.updateNewMixtape = function (params,cb) {
     };
 
     var updateObj = {
-        $push: { mixtapes: params._id }
+        $addToSet: { mixtapes: params._id }
     };
 
     this.update(query,updateObj,cb)
