@@ -1,16 +1,12 @@
 $(document).ready(function(){
-	var instruments = $("#instruments");
-	var composers = $("#composers");
-	$.get("https://kickass-classical.herokuapp.com/getAllInstruments", function(data, status){
+	$.get("https://kickass-classical.herokuapp.com/getMixtapesFiltered", function(data, status){
+		console.log(data["data"]);
+        var ul = $("#mixtapes ul");
         var arr = [];
         arr = data["data"];
-        for (var i in arr)
-        	instruments.append($("<option>").attr('value', arr[i]).text(arr[i]));
-    });
-	$.get("https://kickass-classical.herokuapp.com/getAllComposers", function(data, status){
-        var arr = [];
-        arr = data["data"];
-        for (var i in arr)
-        	composers.append($("<option>").attr('value', arr[i]).text(arr[i]));
+        for (var i in arr){
+        	console.log(arr[i]);
+        	ul.append($("<li>").attr('id', arr[i]["_id"]).append("<img>").attr("src",arr[i]["coverImg"]);
+        }
     });
 });

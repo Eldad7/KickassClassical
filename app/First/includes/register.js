@@ -17,11 +17,11 @@ $(document).ready(function(){
     $("#submit").on('click', function(){
     	var favInstruments = $('#instruments').val();
     	var favComposer = $("#composers").val();
-    	//console.log("firstName " + $("#first").val() + " lastName " + $("#last").val()," email " + $("#email").val() + " profileImg " + " test.jpg " + " favInstruments " + favInstruments + " favComposer " + favComposer + " token " +$("#token").val());
+    	console.log("firstName " + $("#first").val() + " lastName " + $("#last").val()," email " + $("#email").val() + " profileImg " + " test.jpg " + " favInstruments " + favInstruments + " favComposer " + favComposer + " token " +$("#token").val());
     	$.post("https://kickass-classical.herokuapp.com/addNewUser",
     		{"firstName":$("#first").val(), "lastName":$("#last").val(),"email":$("#email").val(),"profileImg":"test.jpg","favInstruments":favInstruments,"favComposer":favComposer,"token":$("#token").val()})
     	.done(function(data, status){
-    		console.log(data+" "+status);
+    		console.log("DONE!" + data+" "+status);
     	});
     });
 });
