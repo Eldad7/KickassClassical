@@ -12,7 +12,7 @@ var mixtapeSchema = new Schema({
     genre: String,
     keywords: [String],
     cDate: Date,
-    likes: Number
+    likes: {type:Number,default: 0}
 },{strict:true});
 
 
