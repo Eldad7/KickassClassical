@@ -51,5 +51,11 @@ compositionSchema.statics.IncLikedComposition = function (params,cb) {
     this.update(query,updateObj,cb)
 };
 
+compositionSchema.statics.getAllComposers = function (params,cb) {
+
+    this.distinct('composer',cb)
+};
+
+
 var compositionModel = mongoose.model('compositions', compositionSchema);
 module.exports.compositionModel = compositionModel;

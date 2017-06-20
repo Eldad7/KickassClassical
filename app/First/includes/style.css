@@ -82,3 +82,52 @@ li{
 	margin : 15px 0px 10px 10px;
 }
 
+input,label,button {
+  display:block;
+}
+
+#registerWrapper {
+  width:70%;
+  margin:100px auto;
+}
+
+input {
+  font-size: 40px;
+  margin: 20px 0px;
+  border: none;
+  background: transparent;
+  color:#f5f5f5;
+}
+
+input::placeholder {
+  color:#f5f5f5;
+}
+
+select,button {
+  font-size: 40px;
+  margin: 20px 0px;
+  border: none;
+  background: transparent;
+  color:#f5f5f5;
+}
+
+select {
+  width:320px;
+}
+
+label {
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  color:#f5f5f5;
+}
+
+button {
+  background: whitesmoke;
+  color:blue;
+  padding:10px 30px;
+}
+
+#registerWrapper h1 {
+  color:white;
+}

@@ -6,7 +6,6 @@ var userSchema = new Schema({
     firstName: String,
     lastName: String,
     token: String,
-    address: String,
     email: String,
     cDate: Date,
     mixtapes: [Schema.Types.ObjectId],
@@ -20,7 +19,6 @@ userSchema.statics.addNewUser = function (params,cb) {
     var newUser = {
         firstName: params.firstName,
         lastName: params.lastName,
-        address: params.address,
         email: params.email,
         cDate: Date.now(),
         mixtapes: [],

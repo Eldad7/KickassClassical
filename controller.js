@@ -130,3 +130,13 @@ exports.getCompositionsByIds = function(req, res) {
         res.json({code: 200, data:cb});
     });
 };
+
+exports.getAllComposers = function(req, res) {
+    var params = req.body;
+    console.log(Date.now().toString() + " API CALLED: getAllComposers");
+    compositionModel.getAllComposers(params, function(err, cb) {
+        if (err)
+            res.send(err);
+        res.json({code: 200, data:cb});
+    });
+};

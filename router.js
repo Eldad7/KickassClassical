@@ -26,6 +26,8 @@ app.get('/getAllMixtapes',main.getAllMixtapes);
 
 app.get('/getMixtapeById/:id',main.getMixtapeById);
 
+app.get('/getAllComposers',main.getAllComposers);
+
 app.post('/getMixtapesFiltered',main.getMixtapesFiltered);
 
 app.post('/addNewComposition',main.addNewComposition);
