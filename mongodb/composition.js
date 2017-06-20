@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var compositionSchema = new Schema({
     title: String,
     composer: String,
+    key: String,
     url: String,
     timeLength: String,
     likes: {type:Number,default:0}
@@ -14,9 +15,10 @@ compositionSchema.statics.addNewComposition = function (params,cb) {
 
     var newComposition = {
         title: params.title,
+        key: params.key,
         composer: params.composer,
         url: params.url,
-        timeLength: params.timeLength,
+        timeLength: params.timeLength
     };
 
     var compositionObjModel = new compositionModel(newComposition);

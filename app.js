@@ -2,7 +2,6 @@ var express = require('express');
 app = express();
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
-require('./router');
 require('./mongodb/mongoConnect.js');
 
 app.use(express.static(__dirname + '/'));
@@ -20,3 +19,5 @@ app.use(
 app.listen(port);
 
 console.log('listening on port: '+port);
+
+require('./router');

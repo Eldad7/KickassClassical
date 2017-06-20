@@ -3,10 +3,12 @@ var Schema = mongoose.Schema;
 
 
 var mixtapeSchema = new Schema({
+    title: String,
     indexNum: Number,
     coverImg: String,
     songList: [Schema.Types.ObjectId],
     creatorName: String,
+    creatorId: String,
     instruments: [String],
     genre: String,
     keywords: [String],
@@ -17,11 +19,13 @@ var mixtapeSchema = new Schema({
 mixtapeSchema.statics.addNewMixtape = function (params,cb) {
 
     var newMixtape = {
+        title: params.title,
         indexNum: params.indexNum,
         coverImg: params.coverImg,
         songList: params.songList,
         creatorId: params.creatorId,
         creatorName: params.creatorName,
+        instruments: params.instruments,
         genre: params.genre,
         keywords: params.keywords,
         cDate: Date.now()

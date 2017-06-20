@@ -59,7 +59,7 @@ exports.addNewMixtape = function(req, res) {
         if (err)
             res.send(err);
         else {
-            userModel.addNewMixtape(cb, function(err, callback) {
+            userModel.updateNewMixtape(cb, function(err, callback) {
                 if (err)
                     res.send(err);
                 res.json({code: 200, data:callback});
