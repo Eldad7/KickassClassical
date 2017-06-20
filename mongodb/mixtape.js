@@ -4,7 +4,6 @@ var Schema = mongoose.Schema;
 
 var mixtapeSchema = new Schema({
     title: String,
-    indexNum: Number,
     coverImg: String,
     songList: [Schema.Types.ObjectId],
     creatorName: String,
