@@ -1,7 +1,3 @@
-/**
- * Created by gadyezra on 6/20/17.
- */
-
 var main = require('./controller');
 
 app.get('/', function(req,res) {
