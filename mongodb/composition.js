@@ -52,7 +52,6 @@ compositionSchema.statics.IncLikedComposition = function (params,cb) {
 };
 
 compositionSchema.statics.getAllComposers = function (params,cb) {
-
     this.distinct('composer',cb)
 };
 

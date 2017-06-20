@@ -140,3 +140,13 @@ exports.getAllComposers = function(req, res) {
         res.json({code: 200, data:cb});
     });
 };
+
+exports.getAllInstruments = function(req, res) {
+    var params = req.body;
+    console.log(Date.now().toString() + " API CALLED: getAllInstruments");
+    mixtapeModel.getAllInstruments(params, function(err, cb) {
+        if (err)
+            res.send(err);
+        res.json({code: 200, data:cb});
+    });
+};

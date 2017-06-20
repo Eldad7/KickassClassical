@@ -62,5 +62,9 @@ mixtapeSchema.statics.getMixtapesFiltered = function (params,cb) {
     this.find(query,cb).limit(8);
 };
 
+mixtapeSchema.statics.getAllInstruments = function (params,cb) {
+    this.distinct('instruments',cb)
+};
+
 var mixtapeModel = mongoose.model('mixtapes', mixtapeSchema);
 module.exports.mixtapeModel = mixtapeModel;

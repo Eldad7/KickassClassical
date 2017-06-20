@@ -28,6 +28,8 @@ app.get('/getMixtapeById/:id',main.getMixtapeById);
 
 app.get('/getAllComposers',main.getAllComposers);
 
+app.get('/getAllInstruments',main.getAllInstruments);
+
 app.post('/getMixtapesFiltered',main.getMixtapesFiltered);
 
 app.post('/addNewComposition',main.addNewComposition);
