@@ -9,11 +9,11 @@
 <body>
     <div id="registerWrapper">
       <h1>Enter Your Details:</h1>
-      <form enctype="application/json" method="post" action="https://kickass-classical.herokuapp.com/addNewUser">
-        <input name="firstName" class="input" type="text" placeholder="First Name">
-        <input name="lastName" class="input" type="text" placeholder="Last Name">
-        <input name="token" class="input" type="password" placeholder="Password">
-        <input name="email" class="input" type="text" placeholder="Email">
+      <form enctype="application/json" method="post" action=""<!-- "https://kickass-classical.herokuapp.com/app/first/" -->>
+        <input id="first" name="firstName" class="input" type="text" placeholder="First Name">
+        <input id ="last" name="lastName" class="input" type="text" placeholder="Last Name">
+        <input id = "token" name="token" class="input" type="password" placeholder="Password">
+        <input id = "email" name="email" class="input" type="text" placeholder="Email">
         <label>Favorite Instruments: (Multiple Choice)</label>
         <select name="favInstruments" id="instruments" multiple>         
         </select>
@@ -24,5 +24,5 @@
       </form>
     </div>
 </body>
-<script src="./includes/kickassclassical.js"></script>
+<script src="./includes/register.js"></script>
 </html>
