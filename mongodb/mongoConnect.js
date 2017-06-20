@@ -1,10 +1,5 @@
-/**
- * Created by gadyezra on 5/7/17.
- */
-
-
 var mongoose = require("mongoose");
-var dbURI = 'mongodb://gady:12345@ds023452.mlab.com:23452/gady_ezra';
+var dbURI = 'mongodb://gady:12345@ds133192.mlab.com:33192/kickassclassical';
 var con = mongoose.connection;
 console.log("Loading: " + __filename);
 
