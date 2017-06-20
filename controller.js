@@ -42,7 +42,7 @@ exports.likeComposition = function(req, res) {
     console.log(Date.now().toString() + " API CALLED: likeComposition");
     userModel.likeComposition(params, function(err, cb) {
         if (err || !cb || !cb.nModified)
-            res.json({code: 200, err:"Not Modified, Bad Input / Already Liked"});
+            res.json({code: 400, err:"Not Modified, Bad Input / Already Liked"});
         else {
             compositionModel.IncLikedComposition(params, function(err, callback) {
                 if (err)
@@ -58,7 +58,7 @@ exports.likeMixtape = function(req, res) {
     console.log(Date.now().toString() + " API CALLED: likeMixtape");
     userModel.likeMixtape(params, function(err, cb) {
         if (err || !cb || !cb.nModified)
-            res.json({code: 200, err:"Not Modified, Bad Input / Already Liked"});
+            res.json({code: 400, err:"Not Modified, Bad Input / Already Liked"});
         else {
             compositionModel.IncLikedMixtape(params, function(err, callback) {
                 if (err)

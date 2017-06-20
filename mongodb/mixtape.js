@@ -20,7 +20,6 @@ mixtapeSchema.statics.addNewMixtape = function (params,cb) {
 
     var newMixtape = {
         title: params.title,
-        indexNum: params.indexNum,
         coverImg: params.coverImg,
         songList: params.songList,
         creatorId: params.creatorId,
