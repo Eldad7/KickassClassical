@@ -58,7 +58,7 @@ mixtapeSchema.statics.getMixtapesFiltered = function (params,cb) {
         query.keywords = {$in:params.keywords}
     }
 
-    this.find(query,cb).limit(8);
+    this.find(query,cb);
 };
 
 mixtapeSchema.statics.getAllInstruments = function (params,cb) {
