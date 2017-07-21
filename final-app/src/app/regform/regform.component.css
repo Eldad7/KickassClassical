@@ -1,0 +1,98 @@
+.signupform {
+  overflow: hidden;
+  background: #23b12b;
+  background-image: url(../../includes/images/wolfgang.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% -40%;
+  margin:0;
+  width:100%;
+  height:100%;
+  position:fixed;
+  padding: 0 15%;
+}
+
+.signupformb {
+  background: #533aee;
+  background-image: url(../../includes/images/Beethoven5_upside.jpg);
+  background-repeat: no-repeat;
+  background-position: -500px -150px;
+  background-size:100%;
+  width:100%;
+  height:100%;
+  position:fixed;
+  padding: 0 15%;
+}
+
+.signupformc {
+  background: #ec1b5c;
+  background-image: url(../../includes/images/Johann_Sebastian_Bach_upside.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size:40%;
+  width:100%;
+  height:100%;
+  position:fixed;
+  padding: 0 15%;
+}
+
+.signupformd {
+  overflow: scroll;
+  background: #df371a;
+  background-image: url(../../includes/images/frederic-chopin-upside.jpg);
+  background-repeat: no-repeat;
+  background-position:-120px 100px;
+  background-size:130%;
+  width:100%;
+  height:100%;
+  position:fixed;
+  padding: 0 15%;
+}
+
+.signupforme {
+  overflow:scroll;
+  background: #7b339f;
+  background-image: url(../../includes/images/franz111-.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+  background-size:80%;
+  width:100%;
+  height:100vh;
+  position:fixed;
+  padding: 0 15%;
+}
+
+form {
+  margin-top:100px;
+  color:white;
+}
+
+label {
+  color:white;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+input[type="text"], input[type="textarea"] {
+  font-size: 140px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.email input[type="text"]  {
+  font-size:100px;
+}
+
+.round_button {
+  text-align: center;
+  border: 1px solid white;
+  display: block;
+  margin: 5% auto;
+  height: 80px;
+  width: 80px;
+  padding-top: 30px;
+  font-weight: 200;
+}

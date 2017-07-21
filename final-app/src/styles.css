@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("includes/images/tranBack.jpg");
+  font-family:Arial;
+  margin:0;
+}
+
+
+.homebox {
+  overflow:hidden;
+  background: white;
+  margin: 20px 70px;
+}
+
+.innerhomebox {
+  margin:30px 90px;
+  background-image: url(./includes/images/blueleft.jpg), url(./includes/images/rightred.jpg);
+  background-size: 300px auto,250px auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, top right;
+}
+
+.innerhomeboxcont {
+  margin:0 150px;
+  position:relative;
+}
+
+.logo h1 {
+  font-weight: 300;
+  font-size:26px;
+  color:#1eb129;
+}
+
+.logo h1 span {
+  top:6px;
+  position:relative;
+}
+
+#subtitle {
+  font-size: 147px;
+  font-weight: 400;
+  margin:0;
+  letter-spacing: -5px;
+  line-height: 135px;
+}
+
+.round_button {
+  border-radius: 50%;
+  height: 100px;
+  margin: 40px 40px 0px 40px;
+  width: 100px;
+  padding-top: 42px;
+  background: #ed1b5c;
+  color: white;
+  display: inline-block;
+  font-size:18px;
+}
+
+.button_container {
+  text-align:center;
+}
+
+#login_button {
+  -ms-transform: rotate(19deg); /* IE 9 */
+  -webkit-transform: rotate(19deg); /* Chrome, Safari, Opera */
+  transform: rotate(19deg);
+}
+
+.formbox {
+  margin:0 auto;
+}
+
+.composer {
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.composer-clicked,.composer:hover {
+  font-style: italic;
+  font-weight: 100;
+  color:white;
+}

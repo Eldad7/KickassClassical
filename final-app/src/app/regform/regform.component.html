@@ -1,0 +1,49 @@
+<div [hidden]="success" [ngClass]="current">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div [hidden]="current != 'signupform'">
+      <label> What your name ?
+        <input type="text" placeholder="Your Name" required name="fullname" ngModel>
+      </label>
+      <input type="radio" name="gender" value="male" name="gender" ngModel> Lord <br><br>
+      <input type="radio" name="gender" value="lady" name="gender" ngModel> Lady
+      <div class="round_button" (click)="advance('signupformb')">Next</div>
+
+    </div>
+    <div [hidden]="current != 'signupformb'">
+      <label class="email"> Whats your email address ?
+        <input type="text" placeholder="Example@Email.com" name="email" ngModel>
+      </label>
+      <div class="round_button" (click)="advance('signupformc')">Next</div>
+    </div>
+    <div [hidden]="current != 'signupformc'">
+      <label> Create your password
+        <input type="text" placeholder="Password" name="password" ngModel>
+      </label>
+      <div class="round_button" (click)="advance('signupformd')">Next</div>
+    </div>
+    <div [hidden]="current != 'signupformd'">
+      <label> Choose your favorite composers
+        <div class="composer" *ngFor="let composer of composers" (click)="chooseComposer($event)">{{composer}}</div>
+      </label>
+      <div class="round_button" (click)="advance('signupforme')">Next</div>
+    </div>
+    <div [hidden]="current != 'signupforme'">
+      <label class="email"> Choose your favorite instrument
+        <div class="composer" *ngFor="let instrument of instruments" (click)="chooseInstrument($event)">{{instrument}}</div>
+      </label>
+      <button class="round_button" type="submit">FINISH</button>
+    </div>
+  </form>
+</div>
+<div [hidden]="!success" class="homebox">
+  <div class="innerhomebox">
+    <div class="innerhomeboxcont">
+      <p>Your Registration Process is Done!</p>
+      <h2 id="subtitle">Now You Are Officialy KickassClassical</h2>
+      <div class="button_container">
+        <div class="round_button">START</div>
+      </div>
+    </div>
+  </div>
+</div>
+
