@@ -1,6 +1,7 @@
 import { Component, OnInit,Renderer2 } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { ApiHandlerService } from '../api-handler.service';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-regform',
@@ -18,7 +19,7 @@ export class RegformComponent implements OnInit {
   success: boolean;
   user: Object = {};
 
-  constructor(private renderer: Renderer2, private apiService: ApiHandlerService) { }
+  constructor(private renderer: Renderer2, private apiService: ApiHandlerService, private _localStorage:LocalStorageService) { }
 
   ngOnInit() {
     this.current = 'signupform';
@@ -99,7 +100,12 @@ export class RegformComponent implements OnInit {
 
     this.apiService.apiCall('addNewUser',user,function(data){
       if (data.status == 200) {
+        console.log(data);
+        var res = JSON.parse(data._body);
+        console.log(res);
+        console.log(res.data._id);
         t.success = true;
+        t._localStorage.set('uid',res.data._id);
       }
     });
 

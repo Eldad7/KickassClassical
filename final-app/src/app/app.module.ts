@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes,RouterModule } from '@angular/router';
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -27,13 +28,17 @@ const appRoutes: Routes = [
     MixtapesComponent,
     SingleMixtapeComponent,
     RegformComponent,
-    LoginformComponent
+    LoginformComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    LocalStorageModule.withConfig({
+      prefix: 'kc',
+      storageType: 'localStorage'
+    })
   ],
   exports: [RouterModule],
   providers: [],
