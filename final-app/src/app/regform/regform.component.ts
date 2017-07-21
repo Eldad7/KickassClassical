@@ -22,9 +22,24 @@ export class RegformComponent implements OnInit {
   constructor(private renderer: Renderer2, private apiService: ApiHandlerService, private _localStorage:LocalStorageService) { }
 
   ngOnInit() {
+    this.composers = [];
+    this.apiService.apiCallGet('getAllComposers',null,function(data){
+        var res = JSON.parse(data._body);
+        console.log(res.data);
+        for (var i=0; i<res.data.length; i++){
+          //Todo - add final implementation FUCK THIS SHIT!#%!#I(%!#Y(&T!))
+          
+        }
+    });
     this.current = 'signupform';
-    this.composers = ['Beethoven','Verdi','Tchaikovsky','Chopin','Vivaldy','Pucchi','Handel','Bach','Mozart'];
-    this.instruments = ['Piano','Bassoon','Clarinetto','Cello','Trombone','Harp']
+    this.instruments = [];
+    this.apiService.apiCallGet('getAllInstruments',null,function(data){
+        var res = JSON.parse(data._body);
+        console.log(res.data);
+        for (var i=0; i<res.data.length; i++){
+          //Todo - add final implementation FUCKING FUCK@!%*9125*!@()
+        }
+    });
     this.mycomposers = [];
     this.myinstruments = [];
     this.success = false;
@@ -98,7 +113,7 @@ export class RegformComponent implements OnInit {
       favComposer: this.mycomposers
     }
 
-    this.apiService.apiCall('addNewUser',user,function(data){
+    this.apiService.apiCallPost('addNewUser',user,function(data){
       if (data.status == 200) {
         console.log(data);
         var res = JSON.parse(data._body);

@@ -6,9 +6,18 @@ export class ApiHandlerService {
 
   constructor(private http: Http) { }
 
-  apiCall(api,sendData,cb) {
+  apiCallPost(api,sendData,cb) {
     var apiUrl = 'https://kickass-classical.herokuapp.com/';
     this.http.post(apiUrl+api,sendData).subscribe(data => {
+      // Read the result field from the JSON response.
+      cb(data);
+    });
+
+  }
+
+  apiCallGet(api,sendData,cb) {
+    var apiUrl = 'https://kickass-classical.herokuapp.com/';
+    this.http.get(apiUrl+api,sendData).subscribe(data => {
       // Read the result field from the JSON response.
       cb(data);
     });
