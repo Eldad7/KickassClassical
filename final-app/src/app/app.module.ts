@@ -21,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'login',component: LoginComponent},
   {path: 'registerform',component: RegformComponent},
   {path: 'loginform', component: LoginformComponent},
+  {path: 'singlemix/:id', component: SingleMixtapeComponent},
   {path: 'test', component: MediaplayerComponent}
 ];
 
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
     SingleMixtapeComponent,
     RegformComponent,
     LoginformComponent,
-    MediaplayerComponent,
+    MediaplayerComponent
   ],
   imports: [
     BrowserModule,

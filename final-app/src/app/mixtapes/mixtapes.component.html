@@ -10,7 +10,7 @@
       </div>
       <div class="loader" *ngIf="loading"></div>
       <div *ngFor="let mixtape of currentMixtapes" class="col-md-3 mixtape-thumb">
-        <div class="coverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'">
+        <div class="coverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'" routerLinkActive="active" [routerLink]="['/singlemix',mixtape._id]">
           <div class="overlay">
           <p>
             <span class="glyphicon glyphicon-heart"></span>
@@ -27,5 +27,6 @@
             </h2>
           </div>
       </div>
+    </div>
     </div>
   </div>

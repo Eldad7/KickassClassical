@@ -1,0 +1,47 @@
+.mixtape-cont {
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.75);
+  padding:30px;
+}
+
+.singleCoverImg {
+  height: 350px;
+  background-size: contain;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.playicon {
+  margin-top: 30%;
+  color: white;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.31);
+  border-radius: 50%;
+}
+
+.track {
+  padding: 10px 0px;
+  font-size: 13px;
+  color: #33692B;
+}
+
+span.trackNum {
+  padding: 6px 10px;
+  border: 1px solid #33692B;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.track .glyphicon {
+  margin-left: 10px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #33692B;
+}
+
+.sort {
+  color: #33692b;
+}

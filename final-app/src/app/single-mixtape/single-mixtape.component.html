@@ -1,3 +1,28 @@
-<p>
-  single-mixtape works!
-</p>
+<app-header></app-header>
+<div class="container" id="mixtapes">
+
+  <div class="mixtape-cont">
+
+    <div class="sort">
+      <p>Mixtape by {{mixtape.creatorName}}</p>
+      <p>{{mixtape.songList.length}} Tracks</p>
+      <h1>{{mixtape.title}}</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4" id="singleImg">
+        <div class="singleCoverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'">
+          <span class="glyphicon glyphicon-play playicon"></span>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row" class="track" *ngFor="let track of tracks; let i = index" [attr.data-index]="i">
+          <span class="trackNum">{{i+1}}</span>
+          <span class="trackName">{{track.title}} in {{track.key}} - {{track.composer}} ({{track.timeLength}})</span>
+          <span class="glyphicon glyphicon-heart"></span>
+          <span>{{track.likes}}</span>
+        </div>
+      </div>
+
+  </div>
+</div>
