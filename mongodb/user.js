@@ -51,7 +51,11 @@ userSchema.statics.verifyTok = function(params, cb) {
         if (!queryErr) {
             bcrypt.compare(params.token, user.token, function(err, isMatch) {
                 if (err) return cb(err);
-                cb(null, isMatch);
+                if (isMatch) {
+                    cb(null, user._id);
+                } else {
+                    cb(null, null);
+                }
             });
         }
     });
