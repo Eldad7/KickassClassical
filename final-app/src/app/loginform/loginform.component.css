@@ -1,0 +1,29 @@
+.mixtape-cont {
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.75);
+  padding:30px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align:center;
+  color: #33692B;
+}
+
+form {
+  width:50%;
+  margin:0 auto;
+  text-align:center;
+}
+input {
+  display:block;
+  width:100%;
+  font-size:30px;
+  background: transparent;
+  margin-top:50px;
+  border:1px solid #33692B;
+}
+
+.btn {
+  margin-top:50px;
+}

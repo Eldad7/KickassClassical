@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiHandlerService } from '../api-handler.service';
 import { LocalStorageService } from 'angular-2-local-storage';
-
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-single-mixtape',
@@ -15,7 +15,12 @@ export class SingleMixtapeComponent implements OnInit {
   id: string;
   tracks: any[];
   mixtape: any;
-  constructor(private route: ActivatedRoute, private apiHandler: ApiHandlerService, private localStorage: LocalStorageService) { }
+  constructor(private route: ActivatedRoute, private apiHandler: ApiHandlerService, private localStorage: LocalStorageService, private playService : PlayerService) { }
+
+  playMixtape() {
+    console.log('1st');
+    this.playService.itemSelected.emit(this.mixtape)
+  }
 
   ngOnInit() {
     this.mixtape = {};

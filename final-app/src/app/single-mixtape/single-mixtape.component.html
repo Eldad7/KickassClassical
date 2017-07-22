@@ -11,7 +11,7 @@
 
     <div class="row">
       <div class="col-md-4" id="singleImg">
-        <div class="singleCoverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'">
+        <div (click)="playMixtape()" class="singleCoverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'">
           <span class="glyphicon glyphicon-play playicon"></span>
         </div>
       </div>

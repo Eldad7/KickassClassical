@@ -1,0 +1,28 @@
+#footer {
+  position: fixed;
+  height: 80px;
+  background: #1e2e40;
+  bottom: 0;
+  color:white;
+  width: 100%;
+  padding:15px;
+  font-size:38px;
+  border-left: 2px solid #cc2341;
+}
+
+.creatorName {
+  font-size: 13px;
+}
+
+.mixName {
+  font-size: 32px;
+}
+
+.progress {
+  height:10px;
+  margin-top:21px;
+}
+
+.heart {
+  text-align:right;
+}

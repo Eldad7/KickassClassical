@@ -1,3 +1,13 @@
-<p>
-  loginform works!
-</p>
+<div class="container" id="mixtapes">
+  <div class="mixtape-cont">
+
+    <h1>Login</h1>
+    <form (ngSubmit)="submitForm(f)" #f="ngForm">
+      <input type="text" placeholder="Email" name="email" ngModel required>
+      <input type="password" placeholder="Password" name="token" ngModel required>
+      <button class="btn btn-lg">LOGIN</button>
+      <div class="alert-danger" *ngIf="incorrectPass">WRONG PASSWORD
+      </div>
+    </form>
+    </div>
+</div>
