@@ -11,8 +11,8 @@ import { LocalStorageService } from 'angular-2-local-storage';
 })
 export class MixtapesComponent implements OnInit {
 
-  private currentMixtapes: any[];
-  private loading: boolean;
+  public currentMixtapes: any[];
+  public loading: boolean;
   constructor(private apiService: ApiHandlerService, private localStorage: LocalStorageService) { }
 
   ngOnInit() {

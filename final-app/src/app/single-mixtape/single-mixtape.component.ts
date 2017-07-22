@@ -14,7 +14,7 @@ export class SingleMixtapeComponent implements OnInit {
 
   id: string;
   tracks: any[];
-  mixtape: Object;
+  mixtape: any;
   constructor(private route: ActivatedRoute, private apiHandler: ApiHandlerService, private localStorage: LocalStorageService) { }
 
   ngOnInit() {

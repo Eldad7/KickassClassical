@@ -1,3 +1,23 @@
-<p>
-	<button onClick="setVideoId(M3nkuJO2y5I)">Change video</button>
-</p>
+<div class="container">
+  <section class="panel">
+    <div class="panel-body">
+      <youtube-player
+        [videoId]="id"
+        (ready)="savePlayer($event)"
+        (change)="onStateChange($event)"
+        [width]=10
+        [height]=10
+        style="visibility: hidden;">
+      </youtube-player>
+    </div>
+  </section>
+
+  <div class="col-md-12">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default" (click)="setPlaylistId('6JQm5aSjX6g',0)">Load best of Bach song #1</button>
+      <button type="button" class="btn btn-default" (click)="play()">Play</button>
+      <button type="button" class="btn btn-default" (click)="pause()">Pause</button>
+      <button type="button" class="btn btn-default" (click)="setPlaylistId('6JQm5aSjX6g',550)">Change video to song #3</button>
+    </div>
+  </div>
+</div>
