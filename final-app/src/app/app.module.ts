@@ -12,6 +12,7 @@ import { MixtapesComponent } from './mixtapes/mixtapes.component';
 import { SingleMixtapeComponent } from './single-mixtape/single-mixtape.component';
 import { RegformComponent } from './regform/regform.component';
 import { LoginformComponent } from './loginform/loginform.component';
+import { MediaplayerComponent } from './mediaplayer/mediaplayer.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     SingleMixtapeComponent,
     RegformComponent,
     LoginformComponent,
+    MediaplayerComponent,
   ],
   imports: [
     BrowserModule,
