@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("includes/images/tranBack.jpg");
+  background-image: url("assets/images/tranBack.jpg");
   font-family:Arial;
   margin:0;
 }
@@ -19,7 +19,7 @@ body {
 
 .innerhomebox {
   margin:30px 90px;
-  background-image: url(./includes/images/blueleft.jpg), url(./includes/images/rightred.jpg);
+  background-image: url(assets/images/blueleft.jpg), url(assets/images/rightred.jpg);
   background-size: 300px auto,250px auto;
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, top right;
