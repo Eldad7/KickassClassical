@@ -1,0 +1,45 @@
+.header {
+  background: white;
+  padding:8px 0;
+  border-bottom: 1px solid #1eb129;
+}
+
+.logo h2 {
+  font-weight: 300;
+  font-size:18px;
+  color:#1eb129;
+  margin:0;
+}
+
+.logo h2 span {
+  top:4px;
+  position:relative;
+}
+
+input {
+  width: 70%;
+  border-radius: 6px;
+  border: 2px solid #1eb129;
+  font-size:12px;
+}
+
+.profileimg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid #1eb129;
+  right: 134px;
+  top: 6px;
+  border-radius: 50%;
+  background: white;
+}
+
+.profilename {
+  font-size: 13px;
+  padding-top: 4px;
+  color: #1eb129;
+}
+
+.profilename span {
+  font-style: italic;
+}

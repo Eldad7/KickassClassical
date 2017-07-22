@@ -15,6 +15,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
+  {path: 'main', component: MixtapesComponent},
   {path: 'login',component: LoginComponent},
   {path: 'registerform',component: RegformComponent},
   {path: 'loginform', component: LoginformComponent}
