@@ -11,6 +11,7 @@ var mixtapeSchema = new Schema({
     instruments: [String],
     genre: String,
     keywords: [String],
+    url: String,
     cDate: Date,
     likes: {type:Number,default: 0}
 },{strict:true});
@@ -26,6 +27,7 @@ mixtapeSchema.statics.addNewMixtape = function (params,cb) {
         creatorName: params.creatorName,
         instruments: params.instruments,
         genre: params.genre,
+        url: params.url,
         keywords: params.keywords,
         cDate: Date.now()
     };
