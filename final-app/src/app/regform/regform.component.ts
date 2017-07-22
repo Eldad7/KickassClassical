@@ -22,23 +22,22 @@ export class RegformComponent implements OnInit {
   constructor(private renderer: Renderer2, private apiService: ApiHandlerService, private _localStorage:LocalStorageService) { }
 
   ngOnInit() {
+    var t = this
     this.composers = [];
-    this.apiService.apiCallGet('getAllComposers',null,function(data){
+    this.apiService.apiCallGet('getAllComposers',function(data){
+      if (data.status == 200) {
         var res = JSON.parse(data._body);
-        console.log(res.data);
-        for (var i=0; i<res.data.length; i++){
-          //Todo - add final implementation FUCK THIS SHIT!#%!#I(%!#Y(&T!))
-          
-        }
+        t.composers = res.data;
+      }
+
     });
     this.current = 'signupform';
     this.instruments = [];
-    this.apiService.apiCallGet('getAllInstruments',null,function(data){
+    this.apiService.apiCallGet('getAllInstruments',function(data){
+      if (data.status == 200) {
         var res = JSON.parse(data._body);
-        console.log(res.data);
-        for (var i=0; i<res.data.length; i++){
-          //Todo - add final implementation FUCKING FUCK@!%*9125*!@()
-        }
+        t.instruments = res.data;
+      }
     });
     this.mycomposers = [];
     this.myinstruments = [];
