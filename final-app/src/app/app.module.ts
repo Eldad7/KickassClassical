@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes,RouterModule } from '@angular/router';
 import { LocalStorageModule } from 'angular-2-local-storage';
-
+import { YoutubePlayerModule } from 'ng2-youtube-player';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   {path: 'login',component: LoginComponent},
   {path: 'registerform',component: RegformComponent},
-  {path: 'loginform', component: LoginformComponent}
+  {path: 'loginform', component: LoginformComponent},
+  {path: 'test', component: MediaplayerComponent}
 ];
 
 @NgModule({
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    YoutubePlayerModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
@@ -48,3 +51,5 @@ const appRoutes: Routes = [
 })
 
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
