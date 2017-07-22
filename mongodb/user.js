@@ -48,6 +48,7 @@ userSchema.statics.addNewUser = function (params,cb) {
 userSchema.statics.verifyTok = function(params, cb) {
 
     this.findOne({email:params.email}, function(queryErr,user){
+        console.log(user);
         if (!queryErr && !user) {
             bcrypt.compare(params.token, user.token, function(err, isMatch) {
                 if (err) return cb(err);
