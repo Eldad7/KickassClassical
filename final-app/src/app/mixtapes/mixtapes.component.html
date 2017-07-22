@@ -1,9 +1,31 @@
 <app-header></app-header>
-  <div class="container">
+  <div class="container" id="mixtapes">
     <div class="row">
       <h1>Mixtapes</h1>
     </div>
-    <div class="mixtape-cont">
-
+    <div class="mixtape-cont row">
+      <div class="sort">
+        A Playlist for every occasion.
+        <button class="btn btn-sm">sort by</button>
+      </div>
+      <div class="loader" *ngIf="loading"></div>
+      <div *ngFor="let mixtape of currentMixtapes" class="col-md-3 mixtape-thumb">
+        <div class="coverImg" [style.background-image]="'url(' + mixtape.coverImg + ')'">
+          <div class="overlay">
+          <p>
+            <span class="glyphicon glyphicon-heart"></span>
+            {{mixtape.likes}}
+          </p>
+            <p>
+              {{mixtape.songList.length}} Tracks
+            </p>
+            <p>
+              by {{mixtape.creatorName}}
+            </p>
+            <h2>
+              {{mixtape.title}}
+            </h2>
+          </div>
+      </div>
     </div>
   </div>
