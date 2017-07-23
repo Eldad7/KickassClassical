@@ -17,13 +17,13 @@
     <!--</div>-->
   <!--</div>-->
 <!--</div>-->
-
-<div id="footer">
+<div id="footerspace" *ngIf="active"></div>
+<div id="footer" *ngIf="active">
   <div class="col-md-4">
     <span *ngIf="!playing" class="play glyphicon glyphicon-play" (click)="play()"></span>
     <span *ngIf="playing" class="play glyphicon glyphicon-pause" (click)="pause()"></span>
-    <span class="mixName">Mixtape</span>
-      <span class="creatorName">by Creator name</span>
+    <span class="mixName">{{mixtape.title}}</span>
+      <span class="creatorName">{{mixtape.creatorName}}</span>
   </div>
   <div class="col-md-4">
     <div class="progress">

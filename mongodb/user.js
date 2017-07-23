@@ -22,7 +22,7 @@ userSchema.statics.addNewUser = function (params,cb) {
         firstName: params.firstName,
         lastName: params.lastName,
         email: params.email,
-        profileImg: params.profileImg,
+        profileImg: params.profileImg  || 'assets/images/profile.png',
         cDate: Date.now(),
         mixtapes: [],
         liked: [],

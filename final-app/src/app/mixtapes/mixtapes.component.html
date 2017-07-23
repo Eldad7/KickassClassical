@@ -6,7 +6,12 @@
     <div class="mixtape-cont row">
       <div class="sort">
         A Playlist for every occasion.
-        <button class="btn btn-sm">sort by</button>
+        <button class="btn btn-sm" (click)="sortActive = !sortActive">sort by</button>
+        <div *ngIf="sortActive" class="sortbtns">
+          <button class="btn btn-sm" (click)="sortBy('title')">Title</button>
+          <button class="btn btn-sm" (click)="sortBy('num')">Num of tracks</button>
+          <button class="btn btn-sm" (click)="sortBy('creator')">Creator</button>
+        </div>
       </div>
       <div class="loader" *ngIf="loading"></div>
       <div *ngFor="let mixtape of currentMixtapes" class="col-md-3 mixtape-thumb">

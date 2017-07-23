@@ -6,7 +6,7 @@ import { PlayerService } from '../player.service';
   selector: 'app-mediaplayer',
   templateUrl: './mediaplayer.component.html',
   styleUrls: ['./mediaplayer.component.css'],
-  providers: [PlayerService]
+  providers: []
 })
 export class MediaplayerComponent implements OnInit {
   public player;
@@ -14,14 +14,26 @@ export class MediaplayerComponent implements OnInit {
 	public id: string;
   public key: string = 'AIzaSyC4ahXrXTMbxD5JduIhh-UnH5yKLm2HiAk';
   public playing: boolean;
-
+  public mixtape: any;
+  public active: boolean;
   constructor(public playerService:PlayerService) {
    }
 
   ngOnInit() {
-    this.playerService.itemSelected.subscribe((data:any) => {
-      console.log(data);
-      console.log("we made it")
+    this.active = false;
+    var t = this;
+    this.playerService.playMixtape.subscribe((data:any) => {
+      if (data.url) {
+        t.setPlaylistId(data.url,0);
+        t.mixtape = {
+          title: data.title,
+          creatorName: data.creatorName
+        }
+      }
+    });
+
+    this.playerService.pauseMixtape.subscribe((data:any) => {
+      this.pause();
     })
   }
 
@@ -42,6 +54,7 @@ export class MediaplayerComponent implements OnInit {
   pause() {
     this.player.pauseVideo();
     this.playing=false;
+    this.playerService.pauseMixtape.emit(null);
   }
 
   setPlaylistId(id,songLocation){
@@ -50,7 +63,9 @@ export class MediaplayerComponent implements OnInit {
   }
 
   loadVideo(songLocation){
+    this.active = true;
   	this.player.loadVideoById(this.id,songLocation,"large");
+  	this.play();
   }
   changeVolume(){}
 

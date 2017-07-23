@@ -71,7 +71,6 @@ export class RegformComponent implements OnInit {
   }
 
   chooseInstrument(event:any) {
-    console.log(event);
     var a = this.renderer;
     var exist = false;
 
@@ -103,6 +102,7 @@ export class RegformComponent implements OnInit {
   onSubmit(form: NgForm) {
     var t = this;
     var name = form.value.fullname.split(' ');
+    console.log(name);
     var user = {
       firstName: name[0],
       lastName: name[1],
