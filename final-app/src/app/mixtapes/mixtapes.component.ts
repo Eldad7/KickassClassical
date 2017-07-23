@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
   providers: [ApiHandlerService]
 })
 export class MixtapesComponent implements OnInit {
-
+  public sortActive: boolean;
   public currentMixtapes: any[];
   public loading: boolean;
   constructor(private apiService: ApiHandlerService, private localStorage: LocalStorageService, private router: Router) { }

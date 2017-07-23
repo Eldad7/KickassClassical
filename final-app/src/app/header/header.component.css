@@ -31,7 +31,7 @@ input {
   right: 134px;
   top: 6px;
   border-radius: 50%;
-  background: white;
+  background-size: cover;
 }
 
 .profilename {
